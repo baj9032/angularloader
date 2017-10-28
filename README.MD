@@ -16,7 +16,7 @@ $ npm install angularloader
 
 ## Consuming our library
 
-and then from our Angular `AppModule`:
+and then from your Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,7 +24,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import our library
+// Import library
 import { LoaderModule } from 'angularloader';
 
 @NgModule({
@@ -34,7 +34,7 @@ import { LoaderModule } from 'angularloader';
   imports: [
     BrowserModule,
 
-    // Specify our library as an import
+    // Specify library as an import
     LoaderModule.forRoot()
   ],
   providers: [],
@@ -46,15 +46,15 @@ export class AppModule { }
 Once our library is imported, you can use component in your Angular application:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
+<!-- You can now use library component in app.component.html -->
 <h1>
   {{title}}
 </h1>
 <aj-loader [isLoaderVisible]='isshowloader'></aj-loader>
 ```
 
-Now you can use isshowloader variable in app.component.ts:
-If you want to display loader then set isshowloader variable to true otherwise false
+Now you can use isshowloader variable in app.component.ts.
+If you want to display loader then set isshowloader variable to `true` otherwise `false`.
 
 ```typescript
 class AppComponent {
