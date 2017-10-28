@@ -209,16 +209,16 @@
 
 <h1 id="angularloader">angularloader</h1>
 <h2 id="installation">Installation</h2>
-<p>To install this library, run:</p>
-<pre class="line-numbers"><code class="language-bash">$ npm install angularloader --save</code></pre><h2 id="consuming-your-library">Consuming your library</h2>
-<p>Once you have published your library to npm, you can import your library in any Angular application by running:</p>
-<pre class="line-numbers"><code class="language-bash">$ npm install angularloader</code></pre><p>and then from your Angular <code>AppModule</code>:</p>
+<p>To install this library globally, run:</p>
+<pre class="line-numbers"><code class="language-bash">$ npm install angularloader --save -g</code></pre><p>To install this library locally, run:</p>
+<pre class="line-numbers"><code class="language-bash">$ npm install angularloader</code></pre><h2 id="consuming-our-library">Consuming our library</h2>
+<p>and then from your Angular <code>AppModule</code>:</p>
 <pre class="line-numbers"><code class="language-typescript">import { BrowserModule } from &#39;&#64;angular/platform-browser&#39;;
 import { NgModule } from &#39;&#64;angular/core&#39;;
 
 import { AppComponent } from &#39;./app.component&#39;;
 
-// Import your library
+// Import library
 import { LoaderModule } from &#39;angularloader&#39;;
 
 &#64;NgModule({
@@ -228,23 +228,21 @@ import { LoaderModule } from &#39;angularloader&#39;;
   imports: [
     BrowserModule,
 
-    // Specify your library as an import
+    // Specify library as an import
     LoaderModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }</code></pre><p>Once your library is imported, you can use its components, directives and pipes in your Angular application:</p>
-<pre class="line-numbers"><code class="language-xml">&lt;!-- You can now use your library component in app.component.html --&gt;
+export class AppModule { }</code></pre><p>Once our library is imported, you can use component in your Angular application:</p>
+<pre class="line-numbers"><code class="language-xml">&lt;!-- You can now use library component in app.component.html --&gt;
 &lt;h1&gt;
   {{title}}
 &lt;/h1&gt;
-&lt;aj-loader [isLoaderVisible]=&#39;isshowloader&#39;&gt;&lt;/aj-loader&gt;</code></pre><p>Now you can user isshowloader variable in app.component.ts:</p>
-<pre class="line-numbers"><code class="language-typescript">&lt;!-- If you want to display loader then set isshowloader variable to true otherwise false--&gt;
-class AppComponent {
-
+&lt;aj-loader [isLoaderVisible]=&#39;isshowloader&#39;&gt;&lt;/aj-loader&gt;</code></pre><p>Now you can use isshowloader variable in app.component.ts.
+If you want to display loader then set isshowloader variable to <code>true</code> otherwise <code>false</code>.</p>
+<pre class="line-numbers"><code class="language-typescript">class AppComponent {
   isshowloader: boolean = false;
-
 }</code></pre><h2 id="development">Development</h2>
 <p>To generate all <code>*.js</code>, <code>*.d.ts</code> and <code>*.metadata.json</code> files:</p>
 <pre class="line-numbers"><code class="language-bash">$ npm run build</code></pre><p>To lint all <code>*.ts</code> files:</p>
