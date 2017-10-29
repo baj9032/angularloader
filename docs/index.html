@@ -211,7 +211,8 @@
 <h2 id="installation">Installation</h2>
 <p>To install this library globally, run:</p>
 <pre class="line-numbers"><code class="language-bash">$ npm install angularloader --save -g</code></pre><p>To install this library locally, run:</p>
-<pre class="line-numbers"><code class="language-bash">$ npm install angularloader</code></pre><h2 id="consuming-our-library">Consuming our library</h2>
+<pre class="line-numbers"><code class="language-bash">$ npm install angularloader</code></pre><p>Add below line to your <code>system.config.js</code></p>
+<pre class="line-numbers"><code class="language-bash"> &#39;angularloader&#39;:&#39;npm:angularloader/angularloader.umd.js&#39;,</code></pre><h2 id="consuming-our-library">Consuming our library</h2>
 <p>and then from your Angular <code>AppModule</code>:</p>
 <pre class="line-numbers"><code class="language-typescript">import { BrowserModule } from &#39;&#64;angular/platform-browser&#39;;
 import { NgModule } from &#39;&#64;angular/core&#39;;
@@ -239,7 +240,7 @@ export class AppModule { }</code></pre><p>Once our library is imported, you can 
 &lt;h1&gt;
   {{title}}
 &lt;/h1&gt;
-&lt;aj-loader [isLoaderVisible]=&#39;isshowloader&#39;&gt;&lt;/aj-loader&gt;</code></pre><p>Now you can use isshowloader variable in app.component.ts.
+&lt;aj-loader [isLoaderVisible]=&#39;isshowloader&#39;&gt;&lt;/aj-loader&gt;</code></pre><p>Now you can use isshowloader variable in <code>app.component.ts</code>.
 If you want to display loader then set isshowloader variable to <code>true</code> otherwise <code>false</code>.</p>
 <pre class="line-numbers"><code class="language-typescript">class AppComponent {
   isshowloader: boolean = false;
@@ -247,7 +248,7 @@ If you want to display loader then set isshowloader variable to <code>true</code
 <p>To generate all <code>*.js</code>, <code>*.d.ts</code> and <code>*.metadata.json</code> files:</p>
 <pre class="line-numbers"><code class="language-bash">$ npm run build</code></pre><p>To lint all <code>*.ts</code> files:</p>
 <pre class="line-numbers"><code class="language-bash">$ npm run lint</code></pre><h2 id="license">License</h2>
-<p>MIT © <a href="mailto:baj9032@gmail.com">ankit bhanderi</a></p>
+<p>MIT © <a href="mailto:baj9032@gmail.com">Ankit Bhanderi</a></p>
 
 
 
