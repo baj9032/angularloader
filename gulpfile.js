@@ -170,14 +170,23 @@ gulp.task('copy:readme', function () {
 });
 
 /**
- * 10. Delete /.tmp folder
+ * 10. Copy loader.html from / to /dist
+ */
+// gulp.task('copy:loader.html', function () {
+//   return gulp.src([path.join(srcFolder, 'loader.html')])
+//     .pipe(gulp.dest(distFolder));
+// });
+
+
+/**
+ * 11. Delete /.tmp folder
  */
 gulp.task('clean:tmp', function () {
   return deleteFolders([tmpFolder]);
 });
 
 /**
- * 11. Delete /build folder
+ * 12. Delete /build folder
  */
 gulp.task('clean:build', function () {
   return deleteFolders([buildFolder]);
@@ -194,6 +203,7 @@ gulp.task('compile', function () {
     'copy:build',
     'copy:manifest',
     'copy:readme',
+    // 'copy:loader.html',
     'clean:build',
     'clean:tmp',
     function (err) {
