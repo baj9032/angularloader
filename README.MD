@@ -14,6 +14,10 @@ To install this library locally, run:
 $ npm install angularloader
 ```
 
+Add below line to your `system.config.js`
+```bash
+ 'angularloader':'npm:angularloader/angularloader.umd.js',
+```
 ## Consuming our library
 
 and then from your Angular `AppModule`:
@@ -53,7 +57,7 @@ Once our library is imported, you can use component in your Angular application:
 <aj-loader [isLoaderVisible]='isshowloader'></aj-loader>
 ```
 
-Now you can use isshowloader variable in app.component.ts.
+Now you can use isshowloader variable in `app.component.ts`.
 If you want to display loader then set isshowloader variable to `true` otherwise `false`.
 
 ```typescript
@@ -78,4 +82,4 @@ $ npm run lint
 
 ## License
 
-MIT © [ankit bhanderi](mailto:baj9032@gmail.com)
+MIT © [Ankit Bhanderi](mailto:baj9032@gmail.com)
