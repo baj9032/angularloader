@@ -1,6 +1,6 @@
 {
   "name": "angularloader",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "This is work on angular2 and angular4.",
   "scripts": {
     "build": "gulp build",
