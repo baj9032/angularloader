@@ -15,16 +15,8 @@ import { LoaderModule }  from 'angularloader';
 })
 class AppComponent {
 
-  isshowloader: boolean = false;
+  isshowloader: boolean = true;
   
-   start() {
-     this.isshowloader = true;
- 
-     let that = this;
-     setTimeout(function () {
-       that.isshowloader = true;
-     }, 1000);
-   }
 }
 
 @NgModule({
